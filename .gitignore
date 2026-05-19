@@ -4,7 +4,8 @@
 *.dll
 *.so
 *.dylib
-test
+/test.exe
+/chess-server.exe
 /dist/
 
 # Go workspace

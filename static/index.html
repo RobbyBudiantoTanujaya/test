@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chess</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <aside id="sidebar">
+      <h1>♟ Chess</h1>
+
+      <div id="status-box">
+        <span id="turn-indicator"></span>
+        <span id="status-text"></span>
+      </div>
+
+      <div id="controls">
+        <button id="btn-new">New Game</button>
+        <button id="btn-undo">Undo</button>
+      </div>
+
+      <div id="mode-box">
+        <label class="mode-label">
+          <input type="radio" name="mode" value="2p" checked> Two Players
+        </label>
+        <label class="mode-label">
+          <input type="radio" name="mode" value="white"> Play as White
+        </label>
+        <label class="mode-label">
+          <input type="radio" name="mode" value="black"> Play as Black
+        </label>
+      </div>
+
+      <div id="history-box">
+        <h3>Move History</h3>
+        <div id="move-list"></div>
+      </div>
+    </aside>
+
+    <main id="board-wrap">
+      <div id="coords-top" class="coords-row"></div>
+      <div id="board-row">
+        <div id="coords-left" class="coords-col"></div>
+        <div id="board"></div>
+        <div id="coords-right" class="coords-col"></div>
+      </div>
+      <div id="coords-bottom" class="coords-row"></div>
+    </main>
+  </div>
+
+  <div id="promotion-overlay" class="hidden">
+    <div id="promotion-box">
+      <p>Choose promotion piece</p>
+      <div id="promotion-choices"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
